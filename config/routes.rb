@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
+  # Route to the ask action in QuestionsController
+  get "ask", to: "questions#ask"
+
+  # Route to the answer action in QuestionsController
+  get "answer", to: "questions#answer"
+
   # Defines the root path route ("/")
   # root "posts#index"
 end
